@@ -1,0 +1,95 @@
+body {
+    background-color: #f1f5fa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    margin-top: 0px;  
+}
+
+.card {
+    background-color: rgb(147, 147, 147);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    max-width: 700px;
+    margin: 60px auto;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    background: #f1f5fa;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.05s ease;
+    transform: scale(1.08);
+}
+
+button:active {
+
+    transform: scale(0.95);
+
+}   
+
+.meteor {
+    position: fixed;
+
+    width: 22px;
+    height: 22px;
+
+    background: #ff3030;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px #ff9999,
+        0 0 25px #ff3030,
+        0 0 50px red;
+
+    z-index: 100;
+
+    pointer-events: none;
+}
+
+
+.meteor::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: var(--trail-length);
+    height: 8px;
+
+    right: 15px;
+    top: 7px;
+
+    background: linear-gradient(
+        to left,
+        rgba(255,150,150,0.9),
+        transparent
+    );
+
+    border-radius: 50%;
+
+    filter: blur(3px);
+
+}
